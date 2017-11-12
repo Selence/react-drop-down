@@ -1,0 +1,103 @@
+$height:40px;
+$spacing:10px;
+$select-colour:#2875C7;
+$font-size:14px;
+$border-colour:#DDD;
+
+div.dropdown-container {
+
+  &.show>div.dropdown-list {
+    @include transform(scale(1, 1));
+  }
+
+  $icon-width:14px;
+
+  .dropdown-display {
+    float:left;
+    width:100%;
+    background:white;
+    height:$height;
+    cursor:pointer;
+    border:solid 1px $border-colour;
+    box-sizing: border-box;
+
+   >* {
+      float:left;
+      height:100%;
+      @include vertical-centre($height);
+    }
+
+    .fa-angle-down {
+      &:before {
+        content: 'X';
+      }
+    }
+
+    span {
+      font-size:$font-size;
+      width:100%;
+      position:relative;
+      box-sizing: border-box;
+      padding-right:$icon-width+$spacing*2;
+      padding-left:$spacing;
+    }
+
+    i {
+      position:relative;
+      width:$icon-width;
+      margin-left:($spacing+$icon-width)*-1;
+      font-size:1.125em;
+      font-weight:bold;
+      padding-right:$spacing;
+      text-align:right;
+    }
+  }
+
+  .dropdown-list {
+    float:left;
+    width:100%;
+    position:relative;
+    width:100%;
+    @include transform(scale(1, 0));
+    @include transition(-webkit-transform ease 250ms);
+    @include transition(transform ease 250ms);
+
+    >div {
+      position:absolute;
+      width:100%;
+      z-index:2;
+      cursor:pointer;
+      background:white;
+
+      >div {
+        float:left;
+        width:100%;
+        padding:0 $spacing;
+        font-size:$font-size;
+        border:solid 1px $border-colour;
+        border-top:none;
+        box-sizing: border-box;
+
+        $icon-width:20px;
+
+        &:hover {
+          background:#F0F0F0;
+        }
+
+        &.selected {
+          background:$select-colour;
+          color:white;
+        }
+
+        >* {
+          @include vertical-centre($height);
+        }
+
+        >span {
+          float:left;
+          width:100%;
+        }
+      }
+    }
+  }
+}
