@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DropDownBox } from './DropDownBox';
+import { DropDownBox } from '../../public/bundle';
 import {CustumElements} from './CustumElements';
 
 /**

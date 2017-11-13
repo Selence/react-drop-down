@@ -8,7 +8,7 @@
     "build": "webpack -d",
     "watcher": "webpack -d --watch"
   },
-  "author": "Benedikt Sommer <benediktsommer@aol.de>",
+  "author": "Benedikt Sommer",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.26.0",

@@ -1,3 +1,4 @@
+import './styles/main.scss';
 import React, { Component } from 'react';
 import classNames  from 'classnames';
 import PropTypes from 'prop-types';
@@ -6,7 +7,7 @@ import {ListElement} from './ListElements';
 /**
  * @returns {XML}
  */
-export class DropDownBox extends Component {
+export default class DropDownBox extends Component {
     constructor(props) {
         super(props);
 
