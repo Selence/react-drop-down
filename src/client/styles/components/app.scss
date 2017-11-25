@@ -57,7 +57,6 @@ div.dropdown-container {
     float:left;
     width:100%;
     position:relative;
-    width:100%;
     @include transform(scale(1, 0));
     @include transition(-webkit-transform ease 250ms);
     @include transition(transform ease 250ms);
