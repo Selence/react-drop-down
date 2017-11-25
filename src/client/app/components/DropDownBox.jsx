@@ -93,9 +93,9 @@ export class DropDownBox extends Component {
                     <i className="fa fa-angle-down"/>
                 </div>
                 <div className="dropdown-list">
-                    <div>
+                    <ul>
                         {this.renderListItems()}
-                    </div>
+                    </ul>
                 </div>
             </div>
         )

@@ -10,8 +10,8 @@ export const ListElement = ({
 }) => {
 
     return (
-        <div onClick={handler.bind(this, item)}>
+        <li onClick={handler.bind(this, item)}>
             {item}
-        </div>
+        </li>
     )
 };

@@ -62,14 +62,20 @@ div.dropdown-container {
     @include transition(-webkit-transform ease 250ms);
     @include transition(transform ease 250ms);
 
-    >div {
+    >ul {
       position:absolute;
       width:100%;
       z-index:2;
       cursor:pointer;
       background:white;
 
-      >div {
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      -webkit-margin-start: 0;
+      -webkit-margin-end: 0;
+      -webkit-padding-start: 0;
+
+      >li {
         float:left;
         width:100%;
         padding:0 $spacing;
@@ -77,6 +83,7 @@ div.dropdown-container {
         border:solid 1px $border-colour;
         border-top:none;
         box-sizing: border-box;
+        list-style-type: none;
 
         $icon-width:20px;
 
